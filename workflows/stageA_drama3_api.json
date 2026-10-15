@@ -1,0 +1,81 @@
+{
+ "a1": {
+  "class_type": "Drama3Loader",
+  "inputs": {
+   "model_name": "drama3_emo_w4.safetensors",
+   "experts": "in VRAM",
+   "expert_cache_gb": 0.0,
+   "second_gpu": "none",
+   "split_layer": 0
+  }
+ },
+ "a2": {
+  "class_type": "Drama3CodecLoader",
+  "inputs": {
+   "codec_name": "drama3_codec.safetensors"
+  }
+ },
+ "a3": {
+  "class_type": "LoadAudio",
+  "inputs": {
+   "audio": "public_ref.wav"
+  }
+ },
+ "a4": {
+  "class_type": "Drama3EncodeVoice",
+  "inputs": {
+   "codec": [
+    "a2",
+    0
+   ],
+   "audio": [
+    "a3",
+    0
+   ],
+   "transcript": "Printing, in the only sense with which we are at present concerned, differs from most if not from all the arts and crafts represented in the Exhibition"
+  }
+ },
+ "a5": {
+  "class_type": "Drama3Generate",
+  "inputs": {
+   "model": [
+    "a1",
+    0
+   ],
+   "text": "[laughing] Oh, you have to hear this. [sobbing] I thought I had lost everything, [laughs] and then it was right there in my pocket.",
+   "voices.voice0": [
+    "a4",
+    0
+   ],
+   "seed": 11,
+   "temperature": 1.0,
+   "top_p": 0.9,
+   "top_k": 30,
+   "max_frames": 600,
+   "split_long_text": true
+  }
+ },
+ "a6": {
+  "class_type": "Drama3Decode",
+  "inputs": {
+   "codec": [
+    "a2",
+    0
+   ],
+   "codes": [
+    "a5",
+    0
+   ]
+  }
+ },
+ "a7": {
+  "class_type": "SaveAudio",
+  "inputs": {
+   "audio": [
+    "a6",
+    0
+   ],
+   "filename_prefix": "b5/audio"
+  }
+ }
+}
