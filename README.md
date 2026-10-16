@@ -3,7 +3,7 @@
 An open ComfyUI workflow. Text plus a reference voice plus a face image go into **Fish Audio Drama 3**, which makes expressive speech. That speech then drives **MiniMax H3 Ref2VA**, which makes a lip-synced talking video.
 
 [![demo](media/demo.gif)](media/demo_talking.mp4)
-In the demo the face is synthetic (Z-Image Turbo), the voice is the LJ Speech public-domain reference, and the speech comes from the [Emo-W4](https://github.com/skyzer/drama3-quant-bench) Drama 3 build. [▶ voice track (wav)](media/demo_voice.wav)
+In the demo the face is synthetic (Z-Image Turbo), the voice is the LJ Speech public-domain reference, and the speech comes from the [Emo-W4](https://github.com/skyzer/drama3-quant-bench) Drama 3 build (weights: [skysay/drama3-emo-w4](https://huggingface.co/skysay/drama3-emo-w4), private for now). [▶ voice track (wav)](media/demo_voice.wav)
 
 ## Pipeline
 1. **Stage A, audio:** ComfyUI-Drama3 (Loader → Encode voice → Generate → Decode).
