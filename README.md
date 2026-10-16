@@ -5,7 +5,7 @@ An open ComfyUI workflow. Text plus a reference voice plus a face image go into 
 **▶ Watch/listen in your browser: [https://skysay-ai.github.io/drama3-h3-talking/](https://skysay-ai.github.io/drama3-h3-talking/)**
 
 [![demo](media/demo.gif)](https://skysay-ai.github.io/drama3-h3-talking/)
-In the demo the face is synthetic (Z-Image Turbo), the voice is the LJ Speech public-domain reference, and the speech comes from the [Emo-W4](https://github.com/skyzer/drama3-quant-bench) Drama 3 build (weights: [skysay/drama3-emo-w4](https://huggingface.co/skysay/drama3-emo-w4), private for now). Voice track: [▶ play](https://skysay-ai.github.io/drama3-h3-talking/) · [mp4](media/mp4/demo_voice.mp4) · [wav](media/demo_voice.wav)
+In the demo the face is synthetic (Z-Image Turbo), the voice is the LJ Speech public-domain reference, and the speech comes from the [Emo-W4](https://github.com/skyzer/drama3-quant-bench) Drama 3 build (weights: [skysay/drama3-emo-w4](https://huggingface.co/skysay/drama3-emo-w4)). Voice track: [▶ play](https://skysay-ai.github.io/drama3-h3-talking/) · [mp4](media/mp4/demo_voice.mp4) · [wav](media/demo_voice.wav)
 
 ## Pipeline
 1. **Stage A, audio:** ComfyUI-Drama3 (Loader → Encode voice → Generate → Decode).
